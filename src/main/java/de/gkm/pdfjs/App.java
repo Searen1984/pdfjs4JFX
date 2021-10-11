@@ -38,7 +38,7 @@ public class App extends Application {
       if (Worker.State.SUCCEEDED == newV) {
         InputStream stream = null;
         try {
-          InputStream is = getClass().getResourceAsStream("/pdfjs_example.pdf");
+          stream = getClass().getResourceAsStream("/pdfjs_example.pdf");
           byte[] bytes = IOUtils.toByteArray(is);
           // Base64 from java.util
           String base64 = Base64.getEncoder().encodeToString(bytes);
